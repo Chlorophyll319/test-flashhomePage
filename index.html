@@ -4,337 +4,222 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>閃電通 eSIM - 全球無縫連網專家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* 基本樣式重置 */
-      body,
-      h1,
-      h2,
-      h3,
-      p,
-      ul,
-      li,
-      a {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f4f7f9;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      /* 導航列樣式 */
-      header {
-        background: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 1rem 0;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #007bff;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-      }
-      .nav-links li {
-        margin-left: 25px;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: #555;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-      .nav-links a:hover {
-        color: #007bff;
-      }
-      .cta-button {
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
-      .cta-button:hover {
-        background-color: #0056b3;
-      }
-      /* 主視覺區 */
-      .hero {
-        background: #2b3a4a;
-        color: #fff;
-        padding: 100px 0;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-      }
-      .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-      }
-      .hero-img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 40px;
-      }
-      /* 服務特色區 */
-      .features {
-        padding: 80px 0;
-        text-align: center;
-      }
-      .features h2 {
-        font-size: 2.5rem;
-        margin-bottom: 60px;
-      }
-      .feature-grid {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-      .feature-item {
-        background: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        max-width: 300px;
-        text-align: left;
-      }
-      .feature-item h3 {
-        font-size: 1.5rem;
-        margin: 15px 0 10px;
-      }
-      /* 使用情境區 */
-      .use-cases {
-        background: #e9ecef;
-        padding: 80px 0;
-        text-align: center;
-      }
-      .use-cases h2 {
-        font-size: 2.5rem;
-        margin-bottom: 60px;
-      }
-      .case-grid {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-      .case-item {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        max-width: 450px;
-        overflow: hidden;
-      }
-      .case-item img {
-        width: 100%;
-        height: auto;
-      }
-      .case-content {
-        padding: 20px;
-        text-align: left;
-      }
-      .case-content h3 {
-        margin-bottom: 10px;
-      }
-      /* 客戶見證區 */
-      .testimonials {
-        padding: 80px 0;
-        text-align: center;
-      }
-      .testimonials h2 {
-        font-size: 2.5rem;
-        margin-bottom: 60px;
-      }
-      .testimonial-item {
-        max-width: 600px;
-        margin: 0 auto;
-        font-style: italic;
-        color: #555;
-      }
-      .testimonial-item p {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-      }
-      .testimonial-item h4 {
-        font-style: normal;
-        font-weight: bold;
-        color: #333;
-      }
-      /* 頁尾 */
-      footer {
-        background: #2b3a4a;
-        color: #fff;
-        padding: 50px 0;
-        text-align: center;
-      }
-      .footer-nav {
-        margin-bottom: 20px;
-      }
-      .footer-nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        transition: color 0.3s;
-      }
-      .footer-nav a:hover {
-        color: #007bff;
-      }
-      .social-media {
-        margin-top: 20px;
-      }
-      .social-media a {
-        color: #fff;
-        font-size: 1.5rem;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-      /* 圖示簡易樣式 (實際專案應使用 SVG 或字型圖標) */
-      .icon {
-        font-size: 3rem;
-        color: #007bff;
+        height: 100dvh;
+        font-family: "Inter", sans-serif;
       }
     </style>
   </head>
-  <body>
-    <header>
-      <div class="container navbar">
-        <a href="#" class="logo">閃電通</a>
+  <body
+    class="m-0 p-0 box-border font-sans leading-relaxed text-gray-800 bg-gray-100"
+  >
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+      <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+        <a href="#" class="text-3xl font-bold text-blue-600">閃電通</a>
         <nav>
-          <ul class="nav-links">
-            <li><a href="#plans">全球方案</a></li>
-            <li><a href="#ai-service">AI 服務</a></li>
-            <li><a href="#partners">合作夥伴</a></li>
-            <li><a href="#contact">聯絡我們</a></li>
+          <ul class="list-none flex">
+            <li class="ml-6">
+              <a
+                href="#plans"
+                class="no-underline text-gray-600 font-medium hover:text-blue-600 transition-colors duration-300"
+                >全球方案</a
+              >
+            </li>
+            <li class="ml-6">
+              <a
+                href="#ai-service"
+                class="no-underline text-gray-600 font-medium hover:text-blue-600 transition-colors duration-300"
+                >AI 服務</a
+              >
+            </li>
+            <li class="ml-6">
+              <a
+                href="#partners"
+                class="no-underline text-gray-600 font-medium hover:text-blue-600 transition-colors duration-300"
+                >合作夥伴</a
+              >
+            </li>
+            <li class="ml-6">
+              <a
+                href="#contact"
+                class="no-underline text-gray-600 font-medium hover:text-blue-600 transition-colors duration-300"
+                >聯絡我們</a
+              >
+            </li>
           </ul>
         </nav>
-        <a href="#" class="cta-button">立即選購</a>
+        <a
+          href="#"
+          class="bg-blue-600 text-white px-5 py-2.5 rounded no-underline font-bold hover:bg-blue-700 transition-colors duration-300"
+          >立即選購</a
+        >
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1>告別漫遊煩惱，閃電通 eSIM 讓你全球無縫連網</h1>
-          <p>專為商務人士與全球旅客打造，即時、高效、智能的行動數據新體驗。</p>
-          <a href="#" class="cta-button">探索全球方案</a>
+      <!-- Hero Section -->
+      <section class="bg-[#2b3a4a] text-white py-24 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+          <h1 class="text-5xl mb-5">
+            告別漫遊煩惱,閃電通 eSIM 讓你全球無縫連網
+          </h1>
+          <p class="text-xl mb-10">
+            專為商務人士與全球旅客打造,即時、高效、智能的行動數據新體驗。
+          </p>
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-5 py-2.5 rounded no-underline font-bold hover:bg-blue-700 transition-colors duration-300"
+            >探索全球方案</a
+          >
         </div>
       </section>
 
-      <section id="features" class="features">
-        <div class="container">
-          <h2>閃電通三大核心優勢</h2>
-          <div class="feature-grid">
-            <div class="feature-item">
-              <div class="icon">🌍</div>
-              <h3>全球 eSIM 方案</h3>
+      <!-- Features Section -->
+      <section id="features" class="py-20 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+          <h2 class="text-4xl mb-15">閃電通三大核心優勢</h2>
+          <div class="flex justify-around flex-wrap gap-10 mt-15">
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-xs text-left">
+              <div class="text-5xl text-blue-600">🌍</div>
+              <h3 class="text-2xl my-4">全球 eSIM 方案</h3>
               <p>
                 涵蓋全球超過 100
-                個國家與地區，多樣化的數據方案選擇，滿足你的所有連網需求。
+                個國家與地區,多樣化的數據方案選擇,滿足你的所有連網需求。
               </p>
             </div>
-            <div class="feature-item">
-              <div class="icon">🤖</div>
-              <h3>AI 智能服務</h3>
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-xs text-left">
+              <div class="text-5xl text-blue-600">🤖</div>
+              <h3 class="text-2xl my-4">AI 智能服務</h3>
               <p>
-                運用 AI 技術，為你智能推薦最適合的方案，並提供 24/7
-                自動化客服，即時解決問題。
+                運用 AI 技術,為你智能推薦最適合的方案,並提供 24/7
+                自動化客服,即時解決問題。
               </p>
             </div>
-            <div class="feature-item">
-              <div class="icon">🔗</div>
-              <h3>API 串接服務</h3>
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-xs text-left">
+              <div class="text-5xl text-blue-600">🔗</div>
+              <h3 class="text-2xl my-4">API 串接服務</h3>
               <p>
-                為 B2B2C 合作夥伴提供穩定的 API 介面，讓你的平台也能輕鬆整合
-                eSIM 服務，創造新商機。
+                為 B2B2C 合作夥伴提供穩定的 API 介面,讓你的平台也能輕鬆整合 eSIM
+                服務,創造新商機。
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="use-cases">
-        <div class="container">
-          <h2>適用於各種旅程</h2>
-          <div class="case-grid">
-            <div class="case-item">
-              <img src="https://via.placeholder.com/450x250" alt="商務出差" />
-              <div class="case-content">
-                <h3>商務出差</h3>
+      <!-- Use Cases Section -->
+      <section class="bg-gray-200 py-20 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+          <h2 class="text-4xl mb-15">適用於各種旅程</h2>
+          <div class="flex justify-center flex-wrap gap-10">
+            <div class="bg-white rounded-lg shadow-md max-w-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/450x250"
+                alt="商務出差"
+                class="w-full h-auto"
+              />
+              <div class="p-5 text-left">
+                <h3 class="mb-2.5">商務出差</h3>
                 <p>
-                  無論是跨國會議或遠端辦公，確保你隨時保持高速連線，不錯過任何重要資訊。
+                  無論是跨國會議或遠端辦公,確保你隨時保持高速連線,不錯過任何重要資訊。
                 </p>
               </div>
             </div>
-            <div class="case-item">
-              <img src="https://via.placeholder.com/450x250" alt="自由行旅客" />
-              <div class="case-content">
-                <h3>自由行旅客</h3>
-                <p>輕鬆分享旅途點滴，使用地圖導航，不再為尋找 Wi-Fi 而煩惱。</p>
+            <div class="bg-white rounded-lg shadow-md max-w-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/450x250"
+                alt="自由行旅客"
+                class="w-full h-auto"
+              />
+              <div class="p-5 text-left">
+                <h3 class="mb-2.5">自由行旅客</h3>
+                <p>輕鬆分享旅途點滴,使用地圖導航,不再為尋找 Wi-Fi 而煩惱。</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="testimonials">
-        <div class="container">
-          <h2>他們都選擇閃電通</h2>
-          <div class="testimonial-item">
-            <p>
-              "閃電通的 eSIM 真的非常方便，一下飛機就能上網，再也不用換卡了！"
+      <!-- Testimonials Section -->
+      <section class="py-20 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+          <h2 class="text-4xl mb-15">他們都選擇閃電通</h2>
+          <div class="max-w-2xl mx-auto italic text-gray-600 mb-8">
+            <p class="text-lg mb-2.5">
+              "閃電通的 eSIM 真的非常方便,一下飛機就能上網,再也不用換卡了!"
             </p>
-            <h4>- 王先生, 商務經理</h4>
+            <h4 class="not-italic font-bold text-gray-800">
+              - 王先生, 商務經理
+            </h4>
           </div>
-          <div class="testimonial-item">
-            <p>"AI 推薦的方案非常準確，而且客服回覆超快，體驗很棒。"</p>
-            <h4>- 陳小姐, 旅遊部落客</h4>
+          <div class="max-w-2xl mx-auto italic text-gray-600">
+            <p class="text-lg mb-2.5">
+              "AI 推薦的方案非常準確,而且客服回覆超快,體驗很棒。"
+            </p>
+            <h4 class="not-italic font-bold text-gray-800">
+              - 陳小姐, 旅遊部落客
+            </h4>
           </div>
         </div>
       </section>
 
-      <section class="hero cta-section">
-        <div class="container">
-          <h2>立即體驗未來連網方式</h2>
-          <p>選擇你的目的地，輕鬆啟動 eSIM，讓每一次旅程都暢行無阻。</p>
-          <a href="#" class="cta-button">立即選購</a>
+      <!-- CTA Section -->
+      <section class="bg-[#2b3a4a] text-white py-24 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+          <h2 class="text-5xl mb-5">立即體驗未來連網方式</h2>
+          <p class="text-xl mb-10">
+            選擇你的目的地,輕鬆啟動 eSIM,讓每一次旅程都暢行無阻。
+          </p>
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-5 py-2.5 rounded no-underline font-bold hover:bg-blue-700 transition-colors duration-300"
+            >立即選購</a
+          >
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <p class="logo">閃電通</p>
-        <div class="footer-nav">
-          <a href="#">關於我們</a>
-          <a href="#">常見問題</a>
-          <a href="#">支援中心</a>
-          <a href="#">服務條款</a>
-          <a href="#">隱私權政策</a>
+    <!-- Footer -->
+    <footer class="bg-[#2b3a4a] text-white py-12 text-center">
+      <div class="max-w-7xl mx-auto px-5">
+        <p class="text-3xl font-bold text-blue-600 mb-5">閃電通</p>
+        <div class="mb-5">
+          <a
+            href="#"
+            class="text-white no-underline mx-4 hover:text-blue-600 transition-colors duration-300"
+            >關於我們</a
+          >
+          <a
+            href="#"
+            class="text-white no-underline mx-4 hover:text-blue-600 transition-colors duration-300"
+            >常見問題</a
+          >
+          <a
+            href="#"
+            class="text-white no-underline mx-4 hover:text-blue-600 transition-colors duration-300"
+            >支援中心</a
+          >
+          <a
+            href="#"
+            class="text-white no-underline mx-4 hover:text-blue-600 transition-colors duration-300"
+            >服務條款</a
+          >
+          <a
+            href="#"
+            class="text-white no-underline mx-4 hover:text-blue-600 transition-colors duration-300"
+            >隱私權政策</a
+          >
         </div>
-        <div class="social-media">
-          <a href="#">FB</a> | <a href="#">IG</a> | <a href="#">LI</a> |
-          <a href="#">X</a>
+        <div class="mt-5">
+          <a href="#" class="text-white text-2xl mx-2.5 no-underline">FB</a> |
+          <a href="#" class="text-white text-2xl mx-2.5 no-underline">IG</a> |
+          <a href="#" class="text-white text-2xl mx-2.5 no-underline">LI</a> |
+          <a href="#" class="text-white text-2xl mx-2.5 no-underline">X</a>
         </div>
-        <p class="copyright">© 2025 閃電通。保留所有權利。</p>
+        <p class="mt-5">© 2025 閃電通。保留所有權利。</p>
       </div>
     </footer>
   </body>
